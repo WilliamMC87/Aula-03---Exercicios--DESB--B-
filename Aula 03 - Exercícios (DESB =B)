@@ -1,0 +1,93 @@
+// 1. Frase, comprimento e maiúsculas
+let frase = "Olá, mundo!";
+console.log("1. Comprimento da frase:", frase.length);
+console.log("1. Frase em maiúsculas:", frase.toUpperCase());
+
+// 2. Variáveis null e undefined
+let variavelNull = null;
+let variavelUndefined;
+
+console.log("2. Valor da variável null:", variavelNull);
+console.log("2. Valor da variável undefined:", variavelUndefined);
+
+// 3. Variáveis de tipos diferentes e template strings
+let numero = 42;
+let texto = "Olá";
+let booleano = true;
+
+let resultado = `3. Número: ${numero}, Texto: ${texto}, Booleano: ${booleano}`;
+console.log(resultado);
+
+// 4. Conversão entre número e string
+let num = 123;
+let str = "456";
+
+let numParaStr = num.toString();
+let strParaNum = parseInt(str);
+
+console.log("4. Tipo após conversão de número para string:", typeof numParaStr);
+console.log("4. Tipo após conversão de string para número:", typeof strParaNum);
+
+// 5. Manipulação de strings
+let mensagem = "JavaScript é incrível!";
+
+let upperCase = mensagem.toUpperCase();
+let lowerCase = mensagem.toLowerCase();
+let sliceTexto = mensagem.slice(0, 10);
+
+console.log("5. Texto em maiúsculas:", upperCase);
+console.log("5. Texto em minúsculas:", lowerCase);
+console.log("5. Texto fatiado:", sliceTexto);
+
+// 6. Operações bancárias
+let saldo = 1000;
+let deposito = 200;
+let saque = 150;
+
+let operacao = deposito - saque;
+saldo += operacao;
+
+console.log("6. Saldo final após depósito e saque:", saldo);
+
+// 7. Verificação de número par ou ímpar
+let valor = 7;
+let resultadoParImpar = valor % 2 === 0 ? "Par" : "Ímpar";
+console.log("7. O número é:", resultadoParImpar);
+
+// 8. Verificação de login e permissão de administrador
+let usuarioLogado = true;
+let usuarioAdmin = false;
+
+let temAcesso = usuarioLogado && usuarioAdmin;
+console.log("8. O usuário tem acesso?", temAcesso);
+
+// 9. Verificação de pelo menos uma variável verdadeira
+let condicao1 = false;
+let condicao2 = true;
+
+let resultadoOr = condicao1 || condicao2;
+console.log("9. Pelo menos uma condição é verdadeira?", resultadoOr);
+
+// 10. Verificação de idade para compra de ingresso
+let idadeMinima = 18;
+let idadeUsuario = 20;
+
+if (idadeUsuario >= idadeMinima) {
+    console.log("10. O usuário pode comprar o ingresso.");
+} else {
+    console.log("10. O usuário não pode comprar o ingresso.");
+}
+
+// 11. Função de saudação personalizada
+function saudacao(nome) {
+    return `11. Olá, ${nome}!`;
+}
+
+console.log(saudacao("Ana"));
+
+// 12. Função para verificar maioridade
+function verificarIdade(idade) {
+    return idade >= 18 ? "12. Maior de idade" : "12. Menor de idade";
+}
+
+console.log(verificarIdade(16));  // Exemplo de uso
