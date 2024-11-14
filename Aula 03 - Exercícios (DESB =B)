@@ -91,3 +91,56 @@ function verificarIdade(idade) {
 }
 
 console.log(verificarIdade(16));  // Exemplo de uso
+
+// 13. Função para verificar se uma palavra é um palíndromo
+function verificaPalindromo(str) {
+    // Reverter a string e comparar com a original
+    let strReversa = str.split('').reverse().join('');
+    
+    // Verificar se a string original é igual à reversa
+    if (str === strReversa) {
+        console.log(true);  // Se for palíndromo
+        return true;
+    } else {
+        console.log(false);  // Se não for palíndromo
+        return false;
+    }
+}
+
+// 14. Função para determinar o maior número entre três
+function maiorNumero(a, b, c) {
+    let maior;
+
+    if (a >= b && a >= c) {
+        maior = a;
+    } else if (b >= a && b >= c) {
+        maior = b;
+    } else {
+        maior = c;
+    }
+
+    console.log("O maior número é:", maior);
+    return maior;
+}
+
+// 15. Função para calcular a potência de um número
+function calculaPotencia(base, expoente) {
+    let resultado = Math.pow(base, expoente);  // Calcula a potência
+    console.log("Resultado da potência:", resultado);
+    return resultado;
+}
+
+// Exemplos de uso
+
+// Teste para a função verificaPalindromo
+verificaPalindromo("arara");  // true
+verificaPalindromo("olá");    // false
+
+// Teste para a função maiorNumero
+maiorNumero(5, 8, 3);  // "O maior número é: 8"
+maiorNumero(10, 7, 15); // "O maior número é: 15"
+
+// Teste para a função calculaPotencia
+calculaPotencia(2, 3);  // 8
+calculaPotencia(5, 2);  // 25
+
